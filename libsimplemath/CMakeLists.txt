@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(libsimplemath C)
+file(GLOB SOURCES *.c)
+add_library(simplemath SHARED ${SOURCES})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+install(TARGETS simplemath DESTINATION .)
